@@ -1,17 +1,11 @@
-/* ========================================
-   สุริยา คะคะเนปะ - Modern Resume Website
-   Design inspired by the original PDF poster
-   ======================================== */
-
 :root {
-  /* Light theme (default) - matching PDF */
   --bg: #fdf8f3;
   --bg-card: #ffffff;
   --text: #1f2937;
   --text-secondary: #4b5563;
-  --accent: #1e40af;          /* deep blue */
+  --accent: #1e40af;
   --accent-light: #3b82f6;
-  --badge-bg: #f5d0a9;        /* warm beige from PDF */
+  --badge-bg: #f5d0a9;
   --badge-text: #78350f;
   --border: #e5e7eb;
   --shadow: 0 10px 40px rgba(30, 64, 175, 0.08);
@@ -22,7 +16,6 @@
   --soft-tag-bg: #fef3c7;
   --soft-tag-text: #92400e;
   --timeline-line: #93c5fd;
-  --success: #059669;
 }
 
 [data-theme="dark"] {
@@ -45,7 +38,6 @@
   --timeline-line: #3b82f6;
 }
 
-/* Reset & Base */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -81,7 +73,6 @@ img {
   display: block;
 }
 
-/* ========== Bubbles Background ========== */
 .bubbles {
   position: fixed;
   inset: 0;
@@ -111,7 +102,6 @@ img {
   50% { transform: translateY(-30px) scale(1.05); opacity: 0.9; }
 }
 
-/* ========== Navbar ========== */
 .navbar {
   position: fixed;
   top: 0;
@@ -183,7 +173,7 @@ img {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
 }
 
 .theme-toggle,
@@ -207,7 +197,24 @@ img {
   display: none;
 }
 
-/* ========== RESUME POSTER (หน้าแรก) ========== */
+.lang-toggle {
+  background: var(--accent);
+  color: white;
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.7rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.lang-toggle:hover {
+  background: var(--accent-light);
+  transform: scale(1.05);
+}
+
 .resume-poster {
   min-height: 100vh;
   padding: 6rem 1.5rem 4rem;
@@ -229,7 +236,6 @@ img {
   transition: background 0.4s, box-shadow 0.4s;
 }
 
-/* Header */
 .poster-header {
   display: flex;
   align-items: center;
@@ -260,12 +266,13 @@ img {
 }
 
 .full-name {
-  font-size: 3.2rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.2;
   color: var(--text);
   letter-spacing: -0.02em;
   margin-bottom: 1rem;
+  white-space: nowrap;
 }
 
 .major-badge {
@@ -278,7 +285,6 @@ img {
   font-size: 1.05rem;
   padding: 0.55rem 1.4rem;
   border-radius: 999px;
-  position: relative;
 }
 
 .diamond {
@@ -295,7 +301,6 @@ img {
   margin: 1.25rem 0 1.75rem;
 }
 
-/* Two columns */
 .poster-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -327,7 +332,6 @@ img {
   margin-top: 0;
 }
 
-/* Contact list */
 .contact-list {
   list-style: none;
   display: flex;
@@ -359,14 +363,12 @@ img {
   text-decoration: underline;
 }
 
-/* About text */
 .about-text {
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.7;
 }
 
-/* Soft skills */
 .soft-skills {
   list-style: none;
   display: flex;
@@ -389,7 +391,6 @@ img {
   font-weight: bold;
 }
 
-/* Experience */
 .exp-item, .edu-item {
   margin-bottom: 0.5rem;
 }
@@ -410,7 +411,6 @@ img {
   color: var(--accent);
 }
 
-/* Achievements & Tech */
 .achievements, .tech-skills {
   list-style: none;
   display: flex;
@@ -433,7 +433,6 @@ img {
   font-weight: bold;
 }
 
-/* ========== General Sections ========== */
 .section {
   padding: 5rem 1.5rem;
   position: relative;
@@ -464,7 +463,6 @@ img {
   border-radius: 2px;
 }
 
-/* About */
 .about-content {
   background: var(--bg-card);
   padding: 2.25rem;
@@ -488,7 +486,6 @@ img {
   color: var(--text);
 }
 
-/* Skills */
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -534,7 +531,7 @@ img {
   border-radius: 999px;
   font-size: 0.88rem;
   font-weight: 500;
-  transition: transform 0.2s, background 0.2s;
+  transition: transform 0.2s;
 }
 
 .tag:hover {
@@ -546,7 +543,6 @@ img {
   color: var(--soft-tag-text);
 }
 
-/* Timeline */
 .timeline {
   position: relative;
   padding-left: 2rem;
@@ -614,7 +610,6 @@ img {
   margin-top: 0.4rem;
 }
 
-/* Contact */
 .contact-intro {
   text-align: center;
   color: var(--text-secondary);
@@ -700,7 +695,6 @@ img {
   transform: translateY(-2px);
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 2rem 1.5rem;
@@ -711,7 +705,6 @@ img {
   z-index: 1;
 }
 
-/* ========== Reveal Animation ========== */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -723,7 +716,6 @@ img {
   transform: translateY(0);
 }
 
-/* ========== Responsive ========== */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -759,62 +751,15 @@ img {
     text-align: center;
     gap: 1.5rem;
   }
-.full-name {
-  font-size: 2.6rem;
-  white-space: nowrap;
-}
 
-.header-decoration {
-  display: flex;
-  gap: 12px;
-  margin-left: auto;
-  align-items: center;
-}
-
-.deco-circle {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--accent);
-  opacity: 0.7;
-  animation: pulse 2s infinite ease-in-out;
-}
-
-.deco-circle:nth-child(2) {
-  width: 10px;
-  height: 10px;
-  animation-delay: 0.3s;
-  opacity: 0.5;
-}
-
-.deco-circle:nth-child(3) {
-  width: 18px;
-  height: 18px;
-  animation-delay: 0.6s;
-  opacity: 0.4;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
-
-@media (max-width: 768px) {
-  .header-decoration {
-    display: none;
-  }
-  .full-name {
-    font-size: 2.1rem;
-    white-space: normal;
-  }
-}
   .profile-photo {
     width: 150px;
     height: 150px;
   }
 
   .full-name {
-    font-size: 2.4rem;
+    font-size: 2.1rem;
+    white-space: normal;
   }
 
   .poster-body {
@@ -837,7 +782,7 @@ img {
 
 @media (max-width: 480px) {
   .full-name {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .major-badge {
