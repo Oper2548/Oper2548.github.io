@@ -77,14 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ----- Download Resume Button -----
   const downloadBtn = document.getElementById('downloadBtn');
-  downloadBtn.addEventListener('click', () => {
-    // เปิด PDF เดิมที่ user มีอยู่ (หรือจะเปลี่ยนเป็นไฟล์ PDF ที่สร้างใหม่ก็ได้)
-    // ตอนนี้จะแจ้งให้ user รู้ว่าควรอัป PDF ไปด้วย
-    alert('💡 เคล็ดลับ: อัปโหลดไฟล์ PDF เรซูเม่ของคุณไปที่ repo แล้วแก้ลิงก์ในปุ่มนี้เป็น path ของ PDF ได้เลยครับ\n\nตัวอย่าง: window.open("resume.pdf", "_blank");');
-    
-    // ถ้ามี PDF ใน repo แล้ว ใช้บรรทัดนี้แทน:
-    // window.open('resume.pdf', '_blank');
-  });
+ downloadBtn.addEventListener('click', () => {
+  window.open('resume.pdf.pdf', '_blank');
+});
 
   // ----- Smooth active nav highlight (optional) -----
   const sections = document.querySelectorAll('section[id]');
