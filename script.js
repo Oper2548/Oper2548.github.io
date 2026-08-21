@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Theme Toggle
+  // ========== Theme Toggle ==========
   const themeToggle = document.getElementById('themeToggle');
   const html = document.documentElement;
   const icon = themeToggle.querySelector('i');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Language Toggle
+  // ========== Language Toggle ==========
   const langToggle = document.getElementById('langToggle');
   let currentLang = localStorage.getItem('lang') || 'th';
 
@@ -154,13 +154,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLogo = document.querySelector('.nav-logo');
     if (navLogo) navLogo.textContent = t.name;
 
-    // Major
+    // Major badge
     const badge = document.querySelector('.major-badge');
     if (badge) {
       badge.innerHTML = `<span class="diamond"></span> ${t.major} <span class="diamond"></span>`;
     }
 
-    // Poster titles
+    // Poster section titles
     const titles = document.querySelectorAll('.section-title');
     if (titles[0]) titles[0].textContent = t.contactTitle;
     if (titles[1]) titles[1].textContent = t.aboutTitle;
@@ -174,13 +174,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const aboutText = document.querySelector('.about-text');
     if (aboutText) aboutText.textContent = t.aboutText;
 
-    // Soft skills
+    // Soft skills (poster list)
     const softSkills = document.querySelectorAll('.soft-skills li');
     if (softSkills[0]) softSkills[0].textContent = t.soft1;
     if (softSkills[1]) softSkills[1].textContent = t.soft2;
     if (softSkills[2]) softSkills[2].textContent = t.soft3;
     if (softSkills[3]) softSkills[3].textContent = t.soft4;
     if (softSkills[4]) softSkills[4].textContent = t.soft5;
+
+    // Soft skills tags (My Skills section)
+    const softTags = document.querySelectorAll('.skill-card .tag.soft');
+    if (softTags[0]) softTags[0].textContent = t.soft1;
+    if (softTags[1]) softTags[1].textContent = t.soft2;
+    if (softTags[2]) softTags[2].textContent = t.soft3;
+    if (softTags[3]) softTags[3].textContent = t.soft4;
+    if (softTags[4]) softTags[4].textContent = t.soft5;
 
     // Experience
     const expRole = document.querySelector('.exp-role');
@@ -268,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyLanguage(newLang);
   });
 
-  // Mobile Menu
+  // ========== Mobile Menu ==========
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.querySelector('.nav-links');
 
@@ -286,7 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Navbar scroll
+  // ========== Navbar scroll ==========
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
@@ -296,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Scroll Reveal
+  // ========== Scroll Reveal ==========
   const reveals = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -308,9 +316,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   reveals.forEach(el => revealObserver.observe(el));
 
-  // Download Button
+  // ========== Download Button ==========
+  // ตอนนี้ใช้ PDF เดียวกันทั้งภาษาไทยและอังกฤษ
+  // ถ้ามี PDF ภาษาอังกฤษ ให้เปลี่ยนชื่อเป็น resume-en.pdf แล้วแก้บรรทัดด้านล่าง
   const downloadBtn = document.getElementById('downloadBtn');
   downloadBtn.addEventListener('click', () => {
+    // ถ้าอยากแยกไฟล์ในอนาคต:
+    // const file = currentLang === 'en' ? 'resume-en.pdf' : 'resume.pdf.pdf';
+    // window.open(file, '_blank');
+    
     window.open('resume.pdf.pdf', '_blank');
   });
 });
