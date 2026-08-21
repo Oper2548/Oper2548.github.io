@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // ========== Theme Toggle ==========
+  // Theme Toggle
   const themeToggle = document.getElementById('themeToggle');
   const html = document.documentElement;
   const icon = themeToggle.querySelector('i');
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ========== Language Toggle ==========
+  // Language Toggle
   const langToggle = document.getElementById('langToggle');
   let currentLang = localStorage.getItem('lang') || 'th';
 
@@ -141,26 +141,22 @@ document.addEventListener('DOMContentLoaded', () => {
   function applyLanguage(lang) {
     const t = translations[lang];
 
-    // Navbar
     document.querySelector('.nav-links li:nth-child(1) a').textContent = t.navResume;
     document.querySelector('.nav-links li:nth-child(2) a').textContent = t.navAbout;
     document.querySelector('.nav-links li:nth-child(3) a').textContent = t.navSkills;
     document.querySelector('.nav-links li:nth-child(4) a').textContent = t.navExp;
     document.querySelector('.nav-links li:nth-child(5) a').textContent = t.navContact;
 
-    // Name
     const nameEl = document.querySelector('.full-name');
     if (nameEl) nameEl.textContent = t.name;
     const navLogo = document.querySelector('.nav-logo');
     if (navLogo) navLogo.textContent = t.name;
 
-    // Major badge
     const badge = document.querySelector('.major-badge');
     if (badge) {
       badge.innerHTML = `<span class="diamond"></span> ${t.major} <span class="diamond"></span>`;
     }
 
-    // Poster section titles
     const titles = document.querySelectorAll('.section-title');
     if (titles[0]) titles[0].textContent = t.contactTitle;
     if (titles[1]) titles[1].textContent = t.aboutTitle;
@@ -170,11 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (titles[5]) titles[5].textContent = t.achieveTitle;
     if (titles[6]) titles[6].textContent = t.techTitle;
 
-    // About text (poster)
     const aboutText = document.querySelector('.about-text');
     if (aboutText) aboutText.textContent = t.aboutText;
 
-    // Soft skills (poster list)
     const softSkills = document.querySelectorAll('.soft-skills li');
     if (softSkills[0]) softSkills[0].textContent = t.soft1;
     if (softSkills[1]) softSkills[1].textContent = t.soft2;
@@ -182,7 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (softSkills[3]) softSkills[3].textContent = t.soft4;
     if (softSkills[4]) softSkills[4].textContent = t.soft5;
 
-    // Soft skills tags (My Skills section)
     const softTags = document.querySelectorAll('.skill-card .tag.soft');
     if (softTags[0]) softTags[0].textContent = t.soft1;
     if (softTags[1]) softTags[1].textContent = t.soft2;
@@ -190,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (softTags[3]) softTags[3].textContent = t.soft4;
     if (softTags[4]) softTags[4].textContent = t.soft5;
 
-    // Experience
     const expRole = document.querySelector('.exp-role');
     if (expRole) expRole.textContent = t.expRole;
     const expDate = document.querySelector('.exp-date');
@@ -198,7 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const expCompany = document.querySelector('.exp-company');
     if (expCompany) expCompany.textContent = t.expCompany;
 
-    // Education
     const eduDegree = document.querySelector('.edu-degree');
     if (eduDegree) eduDegree.textContent = t.eduDegree;
     const eduMajor = document.querySelector('.edu-major');
@@ -206,37 +197,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const eduGpa = document.querySelector('.edu-gpa');
     if (eduGpa) eduGpa.textContent = t.eduGpa;
 
-    // Achievements
     const achieves = document.querySelectorAll('.achievements li');
     if (achieves[0]) achieves[0].textContent = t.achieve1;
     if (achieves[1]) achieves[1].textContent = t.achieve2;
 
-    // Section headings
     const headings = document.querySelectorAll('.section-heading');
     if (headings[0]) headings[0].textContent = t.aboutHeading;
     if (headings[1]) headings[1].textContent = t.skillsHeading;
     if (headings[2]) headings[2].textContent = t.expHeading;
     if (headings[3]) headings[3].textContent = t.contactHeading;
 
-    // About section paragraphs
     const aboutPs = document.querySelectorAll('.about-content p');
     if (aboutPs[0]) aboutPs[0].textContent = t.aboutP1;
     if (aboutPs[1]) aboutPs[1].textContent = t.aboutP2;
     if (aboutPs[2]) aboutPs[2].textContent = t.aboutP3;
     if (aboutPs[3]) aboutPs[3].textContent = t.aboutP4;
 
-    // Contact intro
     const contactIntro = document.querySelector('.contact-intro');
     if (contactIntro) contactIntro.textContent = t.contactIntro;
 
-    // Buttons
-    const downloadBtn = document.getElementById('downloadBtn');
-    if (downloadBtn) downloadBtn.innerHTML = `<i class="fas fa-download"></i> ${t.downloadBtn}`;
+    const downloadBtnEl = document.getElementById('downloadBtn');
+    if (downloadBtnEl) downloadBtnEl.innerHTML = `<i class="fas fa-download"></i> ${t.downloadBtn}`;
 
     const githubBtn = document.querySelector('.btn-primary');
     if (githubBtn) githubBtn.innerHTML = `<i class="fab fa-github"></i> ${t.githubBtn}`;
 
-    // Timeline
     const timelineItems = document.querySelectorAll('.timeline-item');
     if (timelineItems[0]) {
       timelineItems[0].querySelector('.timeline-date').textContent = t.timeline1Date;
@@ -260,7 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (lis[1]) lis[1].textContent = t.timeline3Item2;
     }
 
-    // Footer
     const footer = document.querySelector('.footer p');
     if (footer) footer.textContent = t.footer;
 
@@ -276,15 +260,15 @@ document.addEventListener('DOMContentLoaded', () => {
     applyLanguage(newLang);
   });
 
-  // ========== Mobile Menu ==========
+  // Mobile Menu
   const menuToggle = document.getElementById('menuToggle');
   const navLinks = document.querySelector('.nav-links');
 
   menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('open');
-    const icon = menuToggle.querySelector('i');
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-times');
+    const i = menuToggle.querySelector('i');
+    i.classList.toggle('fa-bars');
+    i.classList.toggle('fa-times');
   });
 
   navLinks.querySelectorAll('a').forEach(link => {
@@ -294,7 +278,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // ========== Navbar scroll ==========
+  // Navbar scroll
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
@@ -304,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // ========== Scroll Reveal ==========
+  // Scroll Reveal
   const reveals = document.querySelectorAll('.reveal');
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -316,16 +300,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   reveals.forEach(el => revealObserver.observe(el));
 
-  // ========== Download Button ==========
-  // ตอนนี้ใช้ PDF เดียวกันทั้งภาษาไทยและอังกฤษ
-  // ถ้ามี PDF ภาษาอังกฤษ ให้เปลี่ยนชื่อเป็น resume-en.pdf แล้วแก้บรรทัดด้านล่าง
-  const downloadBtn = document.getElementById('downloadBtn');
-  downloadBtn.addEventListener('click', () => {
-    // ถ้าอยากแยกไฟล์ในอนาคต:
-    // const file = currentLang === 'en' ? 'resume-en.pdf' : 'resume.pdf.pdf';
-    // window.open(file, '_blank');
-    
-      // ========== Download Button ==========
+  // Download Button (แยกตามภาษา)
   const downloadBtn = document.getElementById('downloadBtn');
   downloadBtn.addEventListener('click', () => {
     const file = currentLang === 'en' ? 'resume-en.pdf.pdf' : 'resume.pdf.pdf';
