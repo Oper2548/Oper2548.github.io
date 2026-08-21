@@ -325,6 +325,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // const file = currentLang === 'en' ? 'resume-en.pdf' : 'resume.pdf.pdf';
     // window.open(file, '_blank');
     
-    window.open('resume.pdf.pdf', '_blank');
+      // ========== Download Button ==========
+  const downloadBtn = document.getElementById('downloadBtn');
+  downloadBtn.addEventListener('click', () => {
+    const file = currentLang === 'en' ? 'resume-en.pdf.pdf' : 'resume.pdf.pdf';
+    window.open(file, '_blank');
   });
 });
