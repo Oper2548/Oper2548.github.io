@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="เรซูเม่ของ สุริยา คะคะเนปะ - บัณฑิตวิทยาการคอมพิวเตอร์ สนใจ Software Development และ QA Testing" />
+  <meta name="author" content="สุริยา คะคะเนปะ" />
+  <title>สุริยา คะคะเนปะ | Resume</title>
+
+  <!-- Google Fonts - Prompt (Thai modern) + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Floating bubbles background -->
+  <div class="bubbles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#top" class="nav-logo">สุริยา คะคะเนปะ</a>
+      <ul class="nav-links">
+        <li><a href="#resume">เรซูเม่</a></li>
+        <li><a href="#about">เกี่ยวกับ</a></li>
+        <li><a href="#skills">ทักษะ</a></li>
+        <li><a href="#experience">ประสบการณ์</a></li>
+        <li><a href="#contact">ติดต่อ</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="สลับโหมดมืด/สว่าง">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="เมนู">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO / RESUME POSTER (หน้าแรกตาม PDF) ========== -->
+  <section class="resume-poster" id="top">
+    <div class="poster-card reveal">
+      <!-- Header: Photo + Name -->
+      <div class="poster-header">
+        <div class="photo-wrapper">
+          <img src="assets/profile.png" alt="สุริยา คะคะเนปะ" class="profile-photo" />
+        </div>
+        <div class="name-block">
+          <h1 class="full-name">สุริยา<br />คะคะเนปะ</h1>
+          <div class="major-badge">
+            <span class="diamond"></span>
+            สาขาวิทยาการคอมพิวเตอร์
+            <span class="diamond"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Two Columns -->
+      <div class="poster-body">
+        <!-- Left Column -->
+        <div class="col-left">
+          <h3 class="section-title">ช่องทางการติดต่อ</h3>
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+66972035012">+66 972035012</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:ryabol2005@gmail.com">ryabol2005@gmail.com</a>
+            </li>
+            <li>
+              <i class="fas fa-globe"></i>
+              <a href="https://oper2548.github.io/" target="_blank" rel="noopener">oper2548.github.io</a>
+            </li>
+            <li>
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/Oper2548" target="_blank" rel="noopener">github.com/Oper2548</a>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>492 หมู่ 15 ซอย5 ต.สามพร้าว<br />อ.เมืองอุดรธานี จ.อุดรธานี</span>
+            </li>
+          </ul>
+
+          <h3 class="section-title">ประวัติโดยย่อ</h3>
+          <p class="about-text">
+            บัณฑิตวิทยาการคอมพิวเตอร์ สนใจด้าน Software Development และ QA Testing ครับ 
+            มีประสบการณ์ทดสอบระบบ และดูแลข้อมูล ผมพร้อมเรียนรู้และพัฒนา 
+            ทักษะเพื่อเติบโตในสายงาน IT ครับผม
+          </p>
+
+          <h3 class="section-title">ทักษะ</h3>
+          <ul class="soft-skills">
+            <li>การสื่อสาร</li>
+            <li>การเรียนรู้เครื่องมือใหม่ๆ</li>
+            <li>การแก้ไขปัญหาเฉพาะหน้า</li>
+            <li>การทำงานอย่างเป็นระบบ</li>
+            <li>ความละเอียดรอบคอบ</li>
+          </ul>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-right">
+          <h3 class="section-title">ประสบการณ์ฝึกงาน</h3>
+          <div class="exp-item">
+            <p class="exp-role">รับตำแหน่ง QA Tester และดูแลข้อมูลลูกค้า</p>
+            <p class="exp-date">1 เมษายน – 12 มิถุนายน 2569</p>
+            <p class="exp-company">บริษัท IGNITE IDEA</p>
+          </div>
+
+          <h3 class="section-title">การศึกษา 2027</h3>
+          <div class="edu-item">
+            <p class="edu-degree">ปริญญาวิทยาศาสตรบัณฑิต (วท.บ.)</p>
+            <p class="edu-major">สาขาวิทยาการคอมพิวเตอร์</p>
+            <p class="edu-gpa">เกรดเฉลี่ยสะสม 2.73</p>
+          </div>
+
+          <h3 class="section-title">ความสำเร็จ</h3>
+          <ul class="achievements">
+            <li>รางวัล NSC ระดับภูมิภาค</li>
+            <li>เป็นผู้สอนเขียนโปรแกรม AI Chatbot ให้กับ อบต. 20 แห่งทั่วจังหวัด อุดรธานี</li>
+          </ul>
+
+          <h3 class="section-title">ทักษะด้านโปรแกรมและเทคโนโลยี</h3>
+          <ul class="tech-skills">
+            <li>HTML / CSS</li>
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>Git / GitHub</li>
+            <li>Visual Studio</li>
+            <li>Unreal Engine</li>
+            <li>XAMPP</li>
+            <li>VS Code</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION (ขยายความ) ========== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <h2 class="section-heading reveal">เกี่ยวกับผม</h2>
+      <div class="about-content reveal">
+        <p>
+          สวัสดีครับ ผม <strong>สุริยา คะคะเนปะ</strong> บัณฑิตสาขาวิทยาการคอมพิวเตอร์ 
+          ที่มีความสนใจเป็นพิเศษในด้าน <strong>Software Development</strong> และ 
+          <strong>QA Testing</strong>
+        </p>
+        <p>
+          ระหว่างฝึกงานที่บริษัท IGNITE IDEA ผมได้รับโอกาสทำหน้าที่ QA Tester 
+          และดูแลข้อมูลลูกค้า ซึ่งทำให้ผมได้เรียนรู้การทำงานจริง การทดสอบระบบอย่างเป็นระบบ 
+          และการสื่อสารกับทีมพัฒนา
+        </p>
+        <p>
+          นอกจากนี้ ผมยังมีประสบการณ์สอนเขียนโปรแกรม AI Chatbot ให้กับองค์การบริหารส่วนตำบล 
+          กว่า 20 แห่งทั่วจังหวัดอุดรธานี และเคยได้รับรางวัล NSC ระดับภูมิภาค
+        </p>
+        <p>
+          ผมพร้อมเรียนรู้เทคโนโลยีใหม่ ๆ อยู่เสมอ และมุ่งมั่นที่จะเติบโตในสายงาน IT 
+          ด้วยความละเอียดรอบคอบและความรับผิดชอบสูงครับ
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <h2 class="section-heading reveal">ทักษะของผม</h2>
+      
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <h3><i class="fas fa-code"></i> Technical Skills</h3>
+          <div class="skill-tags">
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Java</span>
+            <span class="tag">Git / GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Visual Studio</span>
+            <span class="tag">XAMPP</span>
+            <span class="tag">Unreal Engine</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <h3><i class="fas fa-users"></i> Soft Skills</h3>
+          <div class="skill-tags">
+            <span class="tag soft">การสื่อสาร</span>
+            <span class="tag soft">การเรียนรู้เร็ว</span>
+            <span class="tag soft">แก้ปัญหาเฉพาะหน้า</span>
+            <span class="tag soft">ทำงานเป็นระบบ</span>
+            <span class="tag soft">ละเอียดรอบคอบ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE & EDUCATION ========== -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <h2 class="section-heading reveal">ประสบการณ์ & การศึกษา</h2>
+      
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">เม.ย. – มิ.ย. 2569</span>
+            <h3>QA Tester & ดูแลข้อมูลลูกค้า</h3>
+            <p class="company">บริษัท IGNITE IDEA</p>
+            <p>ทดสอบระบบ ตรวจสอบคุณภาพ และจัดการข้อมูลลูกค้าอย่างเป็นระบบ</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">สำเร็จการศึกษา 2027</span>
+            <h3>วิทยาศาสตรบัณฑิต (วท.บ.)</h3>
+            <p class="company">สาขาวิทยาการคอมพิวเตอร์</p>
+            <p>เกรดเฉลี่ยสะสม 2.73</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">ความสำเร็จ</span>
+            <h3>รางวัล & กิจกรรม</h3>
+            <ul>
+              <li>รางวัล NSC ระดับภูมิภาค</li>
+              <li>สอนเขียนโปรแกรม AI Chatbot ให้ อบต. 20 แห่ง ในจังหวัดอุดรธานี</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-heading reveal">ติดต่อผม</h2>
+      <p class="contact-intro reveal">สนใจร่วมงานหรืออยากพูดคุย สามารถติดต่อได้ทุกช่องทางเลยครับ</p>
+      
+      <div class="contact-cards reveal">
+        <a href="tel:+66972035012" class="contact-card">
+          <i class="fas fa-phone"></i>
+          <span>+66 972035012</span>
+        </a>
+        <a href="mailto:ryabol2005@gmail.com" class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <span>ryabol2005@gmail.com</span>
+        </a>
+        <a href="https://github.com/Oper2548" target="_blank" rel="noopener" class="contact-card">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+        </a>
+        <a href="https://oper2548.github.io/" target="_blank" rel="noopener" class="contact-card">
+          <i class="fas fa-globe"></i>
+          <span>Website</span>
+        </a>
+      </div>
+
+      <div class="cta-buttons reveal">
+        <a href="https://github.com/Oper2548" target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fab fa-github"></i> ดูโปรไฟล์ GitHub
+        </a>
+        <button class="btn btn-secondary" id="downloadBtn">
+          <i class="fas fa-download"></i> ดาวน์โหลดเรซูเม่ (PDF)
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 สุริยา คะคะเนปะ · สร้างด้วย ❤️ สำหรับ GitHub Pages</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
