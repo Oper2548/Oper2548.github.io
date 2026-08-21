@@ -759,7 +759,55 @@ img {
     text-align: center;
     gap: 1.5rem;
   }
+.full-name {
+  font-size: 2.6rem;
+  white-space: nowrap;
+}
 
+.header-decoration {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+  align-items: center;
+}
+
+.deco-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.7;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.deco-circle:nth-child(2) {
+  width: 10px;
+  height: 10px;
+  animation-delay: 0.3s;
+  opacity: 0.5;
+}
+
+.deco-circle:nth-child(3) {
+  width: 18px;
+  height: 18px;
+  animation-delay: 0.6s;
+  opacity: 0.4;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@media (max-width: 768px) {
+  .header-decoration {
+    display: none;
+  }
+  .full-name {
+    font-size: 2.1rem;
+    white-space: normal;
+  }
+}
   .profile-photo {
     width: 150px;
     height: 150px;
